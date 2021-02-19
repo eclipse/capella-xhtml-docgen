@@ -20,7 +20,7 @@ location capella-master "https://download.eclipse.org/capella/core/updates/relea
 	org.polarsys.capella.core.re.feature.feature.group lazy
 }
 
-location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/runtime/5.0.1-S202102121036/" {
+location kitalpha-runtime "https://ci.eclipse.org/kitalpha/job/Kitalpha/job/PR-641/2/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/" {
 	org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group lazy
 }
 
@@ -35,4 +35,8 @@ location capella-test "https://download.eclipse.org/capella/core/updates/release
 
 location diffmerge-pattern "https://download.eclipse.org/diffmerge/releases/0.13.0/edm-patterns-site/" {
 	org.eclipse.emf.diffmerge.patterns.templates.gen lazy
+}
+
+location egf-producer "https://download.eclipse.org/egf/updates/1.6.2/2019-06" {
+	org.eclipse.egf.feature.feature.group lazy
 }

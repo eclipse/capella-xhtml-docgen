@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="CapellaXHTMLDocGenAddon" sequenceNumber="1613492725">
+<target name="CapellaXHTMLDocGenAddon" sequenceNumber="1614596001">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="0.0.0"/>
@@ -113,7 +113,7 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-runtime" location="https://download.eclipse.org/kitalpha/updates/stable/runtime/5.0.1-S202102121036/"/>
+      <repository id="kitalpha-runtime" location="https://ci.eclipse.org/kitalpha/job/Kitalpha/job/PR-641/2/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.feature.group" version="0.0.0"/>
@@ -126,6 +126,10 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.patterns.templates.gen" version="0.0.0"/>
       <repository id="diffmerge-pattern" location="https://download.eclipse.org/diffmerge/releases/0.13.0/edm-patterns-site/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.egf.feature.feature.group" version="0.0.0"/>
+      <repository id="egf-producer" location="https://download.eclipse.org/egf/updates/1.6.2/2019-06"/>
     </location>
   </locations>
 </target>
