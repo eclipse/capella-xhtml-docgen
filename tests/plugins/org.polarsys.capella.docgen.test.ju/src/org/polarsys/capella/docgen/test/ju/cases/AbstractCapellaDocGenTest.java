@@ -27,9 +27,7 @@ import org.eclipse.sirius.business.api.session.SessionManager;
 import org.junit.Before;
 import org.osgi.framework.Bundle;
 import org.polarsys.capella.docgen.test.ju.launch.XHTMLDocumentationGenerationLauncher;
-import org.polarsys.capella.docgen.test.ju.reporter.AbstractCapellaDocGenHtmlReporter;
 import org.polarsys.capella.docgen.test.ju.reporter.CapellaDocGenHtmlDomainElementReporter;
-import org.polarsys.capella.docgen.test.ju.reporter.CapellaDocGenHtmlDomainElementResultsReporter;
 import org.polarsys.capella.test.framework.api.BasicTestCase;
 import org.polarsys.kitalpha.doc.gen.business.core.sirius.util.session.DiagramSessionHelper;
 import org.polarsys.kitalpha.doc.gen.business.core.ui.helper.InvokeActivityHelper;
@@ -42,7 +40,7 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 			"platform:/plugin/org.polarsys.capella.docgen.test.ju/egf/capellatestlauncher.fcore#_zup7kAkdEeCBJtEcjZDVOA",
 			true);
 
-	private static AbstractCapellaDocGenHtmlReporter reporter;
+	private static CapellaDocGenHtmlDomainElementReporter reporter;
 	private static Session sessionForTestModel;
 
 	protected String getProjectName() {
@@ -101,12 +99,12 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 		return data;
 	}
 
-	private AbstractCapellaDocGenHtmlReporter setReporter() {
+	private CapellaDocGenHtmlDomainElementReporter setReporter() {
 		reporter = new CapellaDocGenHtmlDomainElementReporter(this);
 		return reporter;
 	}
 
-	protected static AbstractCapellaDocGenHtmlReporter getReporter() {
+	protected static CapellaDocGenHtmlDomainElementReporter getReporter() {
 		return reporter;
 	}
 

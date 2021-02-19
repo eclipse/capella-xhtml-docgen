@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
-import org.polarsys.capella.docgen.test.ju.reporter.AbstractCapellaDocGenHtmlReporter;
+import org.polarsys.capella.docgen.test.ju.reporter.CapellaDocGenHtmlDomainElementReporter;
 
 @RunWith(Parameterized.class)
 public class IFETestCase extends AbstractCapellaDocGenTest {
@@ -28,7 +28,7 @@ public class IFETestCase extends AbstractCapellaDocGenTest {
 	@Parameters
 	public static Collection<Object[]> data() {
 		Path path = new Path(
-				"/model/" + NAME + "/" + NAME + "." + AbstractCapellaDocGenHtmlReporter.TEST_RESULTS_FILE_EXTENSION);
+				"/model/" + NAME + "/" + NAME + "." + CapellaDocGenHtmlDomainElementReporter.TEST_RESULTS_FILE_EXTENSION);
 		return getTestParameters(path);
 	}
 
