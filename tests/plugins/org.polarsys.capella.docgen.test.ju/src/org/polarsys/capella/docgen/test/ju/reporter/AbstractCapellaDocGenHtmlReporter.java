@@ -17,20 +17,21 @@ import org.eclipse.egf.pattern.execution.InternalPatternContext;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.docgen.test.ju.cases.AbstractCapellaDocGenTest;
 import org.polarsys.kitalpha.doc.gen.business.core.reporter.DocGenHtmlReporter;
+import org.polarsys.kitalpha.doc.gen.business.core.util.DocGenHtmlConstants;
 
 public abstract class AbstractCapellaDocGenHtmlReporter extends DocGenHtmlReporter {
 
-	protected final String TEST_RESULTS_FILE_EXTENSION = "test_results.ser";
+	public static final String TEST_RESULTS_FILE_EXTENSION = "test_results.ser";
 
 	protected AbstractCapellaDocGenTest launchedTest;
-	Map<String, String> testResults = new HashMap<String, String>();
+	public static Map<String, String> testResults = new HashMap<String, String>();
 
 	public Map<String, String> getTestResults() {
 		return testResults;
 	}
 
 	public CapellaDocGenTestResult getTestData(String output, PatternContext context,
-			Map<String, Object> parameterValues) {
+			Map<String, Object> parameterValues, String fileName) {
 		Object element = null;
 		CapellaDocGenTestResult testResult = null;
 		if (parameterValues.containsKey("element")) {
@@ -49,7 +50,7 @@ public abstract class AbstractCapellaDocGenHtmlReporter extends DocGenHtmlReport
 				InternalPatternContext ipContext = (InternalPatternContext) context;
 				String patternClass = ipContext.getNode().getPatternClass();
 
-				testResult = new CapellaDocGenTestResult(id, type, patternClass, htmlContent);
+				testResult = new CapellaDocGenTestResult(id, type, patternClass, fileName, htmlContent);
 			}
 		}
 		return testResult;
@@ -78,12 +79,14 @@ public abstract class AbstractCapellaDocGenHtmlReporter extends DocGenHtmlReport
 
 	public AbstractCapellaDocGenHtmlReporter(AbstractCapellaDocGenTest test) {
 		this.launchedTest = test;
+		AbstractCapellaDocGenHtmlReporter.testResults.clear();
 	}
 
 	@Override
 	public void loopFinished(String output, String outputWithCallBack, PatternContext context,
 			Map<String, Object> parameterValues) {
-		CapellaDocGenTestResult testData = getTestData(output, context, parameterValues);
+		String fileName = (String) context.getValue(DocGenHtmlConstants.FILE_NAME);
+		CapellaDocGenTestResult testData = getTestData(output, context, parameterValues, fileName);
 
 		if (testData != null) {
 			getTestResults().put(testData.getClassifierId(), testData.getGeneratedHTMLContent());
@@ -94,17 +97,17 @@ public abstract class AbstractCapellaDocGenHtmlReporter extends DocGenHtmlReport
 		throw new NotImplementedException("This method call should be surcharged");
 	}
 
-	protected File getSerializedTestResultsFile(boolean overwrite) throws IOException {
+	protected File getSerializedTestResultsFile(boolean newFile) throws IOException {
 		IFile outCapellaModel = ResourcesPlugin.getWorkspace().getRoot()
 				.getFile(new Path(launchedTest.getSemanticModelURI().toPlatformString(true)));
 		File testResultsFile = null;
 		if (outCapellaModel.exists()) {
 			IPath outFilePath = outCapellaModel.getRawLocation().removeFileExtension()
-					.addFileExtension(TEST_RESULTS_FILE_EXTENSION);
+					.addFileExtension(TEST_RESULTS_FILE_EXTENSION + (newFile ? ".new" : ""));
 			testResultsFile = outFilePath.toFile();
 			if (!testResultsFile.exists()) {
 				testResultsFile.createNewFile();
-			} else if (overwrite) {
+			} else if (newFile) {
 				testResultsFile.delete();
 				testResultsFile.createNewFile();
 			}

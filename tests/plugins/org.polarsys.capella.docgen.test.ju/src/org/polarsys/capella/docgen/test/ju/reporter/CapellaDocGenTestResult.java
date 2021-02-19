@@ -5,6 +5,7 @@ public class CapellaDocGenTestResult implements Comparable<CapellaDocGenTestResu
 	private String elementID;
 	private String elementType;
 	private String usedPatternClass;
+	private String fileName;
 	private String generatedHTMLContent;
 	
 	public String getElementID() {
@@ -19,19 +20,24 @@ public class CapellaDocGenTestResult implements Comparable<CapellaDocGenTestResu
 		return usedPatternClass;
 	}
 	
+	public String getFileName() {
+		return fileName;
+	}
+	
 	public String getGeneratedHTMLContent() {
 		return generatedHTMLContent;
 	}
 	
 	public String getClassifierId() {
-		return getElementID() + ":" + getElementType() + ":" + getUsedPatternClass();
+		return getElementID() + ":" + getFileName() + ":" + getElementType() + ":" + getUsedPatternClass();
 	}
 	
-	public CapellaDocGenTestResult(String elementID, String elementType, String usedPatternClass, String generatedHTMLContent) {
+	public CapellaDocGenTestResult(String elementID, String elementType, String usedPatternClass, String fileName, String generatedHTMLContent) {
 		this.elementID = elementID;
 		this.elementType = elementType;
 		this.usedPatternClass = usedPatternClass;
 		this.generatedHTMLContent = generatedHTMLContent;
+		this.fileName = fileName;
 	}
 
 	@Override

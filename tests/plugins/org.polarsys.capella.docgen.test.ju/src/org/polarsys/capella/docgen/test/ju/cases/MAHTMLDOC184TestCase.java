@@ -1,47 +1,56 @@
 package org.polarsys.capella.docgen.test.ju.cases;
 
-import java.util.Map;
+import java.util.Collection;
 
+import org.eclipse.core.runtime.Path;
+import org.junit.After;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+import org.polarsys.capella.docgen.test.ju.reporter.AbstractCapellaDocGenHtmlReporter;
+
+@RunWith(Parameterized.class)
 public class MAHTMLDOC184TestCase extends AbstractCapellaDocGenTest {
 
 	private static String NAME = "MAHTMLDOC-184";
-	
-	@Override
-	protected boolean regenerateTestResults() {
-		return false;
-	}
-	
+
 	@Override
 	public String getProjectName() {
 		return NAME;
 	}
-	
+
 	@Override
 	protected String getModelName() {
 		return NAME;
 	}
-	
-	@Override
-	public void test() throws Exception {
-		if (!regenerateTestResults()) {
-			Map<String, String> expectedTestResults = getReporter().getExpectedTestResults();
-			StringBuilder sb = new StringBuilder();
-			getReporter().getTestResults().entrySet().stream().forEach(entry -> {
-				String expectedResult = expectedTestResults.get(entry.getKey());
-				assertNotNull("Object " + entry.getKey() + " does not exist", expectedResult);
-				assertEquals("Object " + entry.getKey() + " does not match", expectedResult, entry.getValue());
-				sb.append(entry.getKey());
-				sb.append(System.lineSeparator());
-			});
-			System.out.println(sb.toString());
-		}
+
+	@Parameters
+	public static Collection<Object[]> data() {
+		Path path = new Path(
+				"/model/" + NAME + "/" + NAME + "." + AbstractCapellaDocGenHtmlReporter.TEST_RESULTS_FILE_EXTENSION);
+		return getTestParameters(path);
 	}
-	
+
+	@Parameter
+	public static String elementID;
+
+	@Parameter(1)
+	public static String expectedContent;
+
 	@Override
-	protected void tearDown() throws Exception {
-		if (regenerateTestResults()) {
-			getReporter().afterTestExecution();
-		}
-		super.tearDown();
+	@Test
+	public void test() throws Exception {
+		String generatedContent = getReporter().getTestResults().get(elementID);
+		assertNotNull("Expected object " + elementID + " cannot be found", generatedContent);
+		assertEquals("Object " + elementID + " does not match", expectedContent, generatedContent);
+	}
+
+	@Override
+	@After
+	public void tearDown() throws Exception {
+		getReporter().afterTestExecution();
+//		super.tearDown();
 	}
 }
