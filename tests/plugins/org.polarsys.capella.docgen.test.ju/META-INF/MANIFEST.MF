@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Capella XHTML DocGen Generation JU Tests
 Bundle-SymbolicName: org.polarsys.capella.docgen.test.ju;singleton:=true
-Bundle-Version: 5.0.1.qualifier
+Bundle-Version: 5.0.0.qualifier
 Require-Bundle: org.junit,
  org.polarsys.capella.docgen;bundle-version="5.0.0",
  org.eclipse.debug.ui;bundle-version="3.14.500",

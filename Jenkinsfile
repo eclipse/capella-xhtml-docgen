@@ -44,5 +44,12 @@ pipeline {
         }
       }
     }
+    stage('Run tests') {
+      steps {
+      	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -Ptests -e -f pom.xml'
+        }
+      }
+    }
   }
 }

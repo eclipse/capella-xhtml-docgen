@@ -29,10 +29,12 @@
 		<tycho-extras-version>2.0.0</tycho-extras-version>
 		<tycho.scmUrl>scm:git:http://git.polarsys.org/c/capella/capella-xhtml-docgen.git</tycho.scmUrl>
 		<antrun-version>1.7</antrun-version>
-		<jacoco-version>0.7.4.201502262128</jacoco-version>
+		<jacoco-version>0.8.6</jacoco-version>
 
 		<!-- for junit -->
 		<capella-product-id>org.polarsys.capella.core.platform.sirius.ui.perspective.product</capella-product-id>
+		<capella-rcp-product-id>org.polarsys.capella.rcp.product</capella-rcp-product-id>
+		<capella-application-id>org.polarsys.capella.core.platform.sirius.ui.perspective.id</capella-application-id>
 		<tycho.testArgLine>-Xms256m -Xmx1024m</tycho.testArgLine>
 
 		<!-- for packaging -->
@@ -80,29 +82,29 @@
 							</execution>
 						</executions>
 					</plugin>
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>tycho-p2-plugin</artifactId>
-					<version>${tycho-version}</version>
-					<executions>
-						<execution>
-							<id>default-p2-metadata-default</id>
-							<configuration>
-								<attachP2Metadata>false</attachP2Metadata>
-							</configuration>
-						</execution>
-						<execution>
-							<id>attach-p2-metadata</id>
-							<phase>package</phase>
-							<goals>
-								<goal>p2-metadata</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<defaultP2Metadata>false</defaultP2Metadata>
-					</configuration>
-				</plugin>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-p2-plugin</artifactId>
+						<version>${tycho-version}</version>
+						<executions>
+							<execution>
+								<id>default-p2-metadata-default</id>
+								<configuration>
+									<attachP2Metadata>false</attachP2Metadata>
+								</configuration>
+							</execution>
+							<execution>
+								<id>attach-p2-metadata</id>
+								<phase>package</phase>
+								<goals>
+									<goal>p2-metadata</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<defaultP2Metadata>false</defaultP2Metadata>
+						</configuration>
+					</plugin>
 				</plugins>
 			</build>
 	
@@ -122,6 +124,9 @@
 		<profile>
 			<id>tests</id>
 			<modules>
+				<module>docgenhtml/features</module>
+				<module>docgenhtml/plugins</module>
+				<module>releng/org.polarsys.capella.docgen.site</module>
 				<module>tests/plugins</module>
 			</modules>
 		</profile>
