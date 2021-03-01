@@ -128,7 +128,7 @@ public class PresentedDiagrmsGeneration {
 
 	protected void method_body(final StringBuffer stringBuffer, final PatternContext ctx) throws Exception {
 
-		Set<DSemanticDiagram> diagramSet = CapellaHelper.getDiagramContainingObject(element);
+		List<DSemanticDiagram> diagramSet = CapellaHelper.getDiagramContainingObject(element);
 		if (diagramSet.size() >= 1) {
 			stringBuffer.append(TEXT_1);
 			stringBuffer.append(CapellaLabelProviderHelper.getText(element));

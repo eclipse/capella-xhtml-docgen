@@ -1,5 +1,5 @@
 <%
-Set<DSemanticDiagram> diagramSet = CapellaHelper.getDiagramContainingObject(element);
+List<DSemanticDiagram> diagramSet = CapellaHelper.getDiagramContainingObject(element);
 if (diagramSet.size() >= 1){%>
 <h2>Diagrams displaying "<%=CapellaLabelProviderHelper.getText(element)%>"</h2>
 <ul>
