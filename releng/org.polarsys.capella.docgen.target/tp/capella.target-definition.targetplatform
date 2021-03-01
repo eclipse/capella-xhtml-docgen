@@ -28,3 +28,11 @@ location kitalpha-runtime "https://download.eclipse.org/kitalpha/updates/stable/
 location eclipse_2020_06 "https://download.eclipse.org/releases/2020-06/" {
 	org.eclipse.emf.query.feature.group lazy
 }
+
+location capella-test "https://download.eclipse.org/capella/core/updates/releases/5.0.0-R20201202-123401/org.polarsys.capella.test.site/" {
+	org.polarsys.capella.test.framework lazy
+}
+
+location diffmerge-pattern "https://download.eclipse.org/diffmerge/releases/0.13.0/edm-patterns-site/" {
+	org.eclipse.emf.diffmerge.patterns.templates.gen lazy
+}
