@@ -15,6 +15,7 @@ Require-Bundle: org.junit,
  org.eclipse.jface;bundle-version="3.20.0",
  org.polarsys.capella.test.framework;bundle-version="5.0.0",
  org.polarsys.kitalpha.doc.gen.business.core,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.eclipse.egf.model.fprod;bundle-version="1.6.2"
 Export-Package: org.polarsys.capella.docgen.test.ju.cases,
  org.polarsys.capella.docgen.test.ju.suites
