@@ -16,6 +16,13 @@ pipeline {
         sh 'mvn clean install -P full -P sign -e -f pom.xml'
       }
     }
+    stage('Run tests') {
+      steps {
+      	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -P tests -X -e -f pom.xml'
+        }
+      }
+    }
     stage('Archive artifacts') {
       steps {
         archiveArtifacts artifacts: 'releng/org.polarsys.capella.docgen.site/target/CapellaXHTMLDocGen-*.zip, releng/org.polarsys.capella.docgen.site/target/repository/**'
@@ -41,13 +48,6 @@ pipeline {
 				scp -r $PROMOTED_SRC genie.capella@projects-storage.eclipse.org:$PROMOTED_DST
 			  
             '''
-        }
-      }
-    }
-    stage('Run tests') {
-      steps {
-      	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -Ptests -e -f pom.xml'
         }
       }
     }
