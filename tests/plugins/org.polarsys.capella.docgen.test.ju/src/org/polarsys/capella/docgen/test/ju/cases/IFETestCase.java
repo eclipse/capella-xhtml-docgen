@@ -48,7 +48,6 @@ public class IFETestCase extends AbstractCapellaDocGenTest {
 
 	@Override
 	protected void tearDown() throws Exception {
-		getReporter().afterTestExecution();
 //		super.tearDown();
 	}
 }

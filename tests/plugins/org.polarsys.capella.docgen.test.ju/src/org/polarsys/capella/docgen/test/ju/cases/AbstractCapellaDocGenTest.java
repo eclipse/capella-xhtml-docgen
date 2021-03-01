@@ -24,6 +24,7 @@ import org.eclipse.egf.model.fcore.FactoryComponent;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.business.api.session.SessionManager;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.osgi.framework.Bundle;
 import org.polarsys.capella.docgen.test.ju.launch.XHTMLDocumentationGenerationLauncher;
@@ -56,7 +57,9 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 	}
 
 	public URI getSemanticModelURI() {
-		return URI.createPlatformResourceURI(getPathPrefix() + "capella", true);
+		return URI.createPlatformResourceURI(getPathPrefix()
+				+ org.polarsys.capella.core.model.handler.command.CapellaResourceHelper.CAPELLA_MODEL_FILE_EXTENSION,
+				true);
 	}
 
 	private URI getDesignModelURI() {
@@ -146,5 +149,10 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 			XHTMLDocumentationGenerationLauncher.gen(getProjectName(), OUTPUT_FOLDER_PATH, factoryComponent,
 					getSemanticModelURI(), reporter);
 		}
+	}
+
+	@AfterClass
+	public static void afterTestExecution() {
+//		getReporter().afterTestExecution();
 	}
 }
