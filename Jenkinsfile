@@ -19,7 +19,7 @@ pipeline {
     stage('Run tests') {
       steps {
       	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
-        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -P tests -X -e -f pom.xml'
+        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -P tests -e -f pom.xml'
         }
       }
     }
