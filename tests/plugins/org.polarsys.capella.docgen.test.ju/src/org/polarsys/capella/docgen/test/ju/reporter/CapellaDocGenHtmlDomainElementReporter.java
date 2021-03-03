@@ -90,7 +90,9 @@ public class CapellaDocGenHtmlDomainElementReporter extends DocGenHtmlReporter {
 		String fileName = (String) context.getValue(DocGenHtmlConstants.FILE_NAME);
 		// Convert line endings
 		String outputLinuxLineEndings = output.replaceAll("\\r\\n", "\n");
-		CapellaDocGenTestResult testData = getTestData(outputLinuxLineEndings, context, parameterValues, fileName);
+		String gifIconGeneratedContent = outputLinuxLineEndings.replaceAll("img src=\"(../)?../icon/(.*?).gif\"", "img src=\"$1../icon/$2.png\"");
+		
+		CapellaDocGenTestResult testData = getTestData(gifIconGeneratedContent, context, parameterValues, fileName);
 
 		if (testData != null) {
 			getTestResults().put(testData.getClassifierId(), testData.getGeneratedHTMLContent());

@@ -1,6 +1,7 @@
 package org.polarsys.capella.docgen.test.ju.cases;
 
 import java.util.Collection;
+import java.util.regex.Pattern;
 
 import org.eclipse.core.runtime.Path;
 import org.junit.Test;
@@ -43,7 +44,8 @@ public class IFETestCase extends AbstractCapellaDocGenTest {
 	public void test() throws Exception {
 		String generatedContent = getReporter().getTestResults().get(elementID);
 		assertNotNull("Expected object " + elementID + " cannot be found", generatedContent);
-		assertEquals("Object " + elementID + " does not match", expectedContent, generatedContent);
+		String gifIconGeneratedContent = generatedContent.replaceAll("img src=\"(../)?../icon/(.*?).gif\"", "img src=\"$1../icon/$2.png\"");
+		assertEquals("Object " + elementID + " does not match", expectedContent, gifIconGeneratedContent);
 	}
 
 	@Override
