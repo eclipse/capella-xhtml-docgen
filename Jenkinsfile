@@ -26,6 +26,7 @@ pipeline {
     stage('Archive artifacts') {
       steps {
         archiveArtifacts artifacts: 'releng/org.polarsys.capella.docgen.site/target/CapellaXHTMLDocGen-*.zip, releng/org.polarsys.capella.docgen.site/target/repository/**'
+        junit '**/target/surefire-reports/*.xml'
       }
     }
     stage('Deploy') {
