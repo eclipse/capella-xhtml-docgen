@@ -25,7 +25,7 @@ public class IFETestCase extends AbstractCapellaDocGenTest {
 		return NAME;
 	}
 
-	@Parameters
+	@Parameters(name = "IFE - {0}")
 	public static Collection<Object[]> data() {
 		Path path = new Path(
 				"/model/" + NAME + "/" + NAME + "." + CapellaDocGenHtmlDomainElementReporter.TEST_RESULTS_FILE_EXTENSION);
