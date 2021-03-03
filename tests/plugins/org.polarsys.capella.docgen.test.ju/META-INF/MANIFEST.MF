@@ -23,5 +23,4 @@ Require-Bundle: org.junit,
  org.eclipse.egf.model.jetpattern;bundle-version="1.6.2",
  org.eclipse.egf.pattern.jet;bundle-version="1.6.2",
  org.eclipse.egf.pattern.ui.jet;bundle-version="1.6.2"
-Export-Package: org.polarsys.capella.docgen.test.ju.cases,
- org.polarsys.capella.docgen.test.ju.suites
+Export-Package: org.polarsys.capella.docgen.test.ju.cases
