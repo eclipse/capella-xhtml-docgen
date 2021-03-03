@@ -10,6 +10,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 import org.polarsys.capella.docgen.test.ju.reporter.CapellaDocGenHtmlDomainElementReporter;
+import org.polarsys.capella.docgen.test.ju.util.CapellaDocGenTestUtil;
 
 @RunWith(Parameterized.class)
 public class IFETestCase extends AbstractCapellaDocGenTest {
@@ -43,9 +44,15 @@ public class IFETestCase extends AbstractCapellaDocGenTest {
 	@Test
 	public void test() throws Exception {
 		String generatedContent = getReporter().getTestResults().get(elementID);
+		
+		// Generated content must not be null
 		assertNotNull("Expected object " + elementID + " cannot be found", generatedContent);
-		String gifIconGeneratedContent = generatedContent.replaceAll("img src=\"(../)?../icon/(.*?).gif\"", "img src=\"$1../icon/$2.png\"");
-		assertEquals("Object " + elementID + " does not match", expectedContent, gifIconGeneratedContent);
+		
+		// Format generated content
+		generatedContent = CapellaDocGenTestUtil.formatDocGenOutput(generatedContent);
+		
+		// Generated content must match
+		assertEquals("Object " + elementID + " does not match", expectedContent, generatedContent);
 	}
 
 	@Override

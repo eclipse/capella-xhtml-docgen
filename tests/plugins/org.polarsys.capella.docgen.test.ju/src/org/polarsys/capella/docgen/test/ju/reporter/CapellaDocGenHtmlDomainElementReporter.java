@@ -18,6 +18,7 @@ import org.eclipse.egf.model.pattern.PatternContext;
 import org.eclipse.egf.pattern.execution.InternalPatternContext;
 import org.polarsys.capella.core.data.capellacore.CapellaElement;
 import org.polarsys.capella.docgen.test.ju.cases.AbstractCapellaDocGenTest;
+import org.polarsys.capella.docgen.test.ju.util.CapellaDocGenTestUtil;
 import org.polarsys.kitalpha.doc.gen.business.core.reporter.DocGenHtmlReporter;
 import org.polarsys.kitalpha.doc.gen.business.core.util.DocGenHtmlConstants;
 
@@ -88,11 +89,11 @@ public class CapellaDocGenHtmlDomainElementReporter extends DocGenHtmlReporter {
 	public void loopFinished(String output, String outputWithCallBack, PatternContext context,
 			Map<String, Object> parameterValues) {
 		String fileName = (String) context.getValue(DocGenHtmlConstants.FILE_NAME);
-		// Convert line endings
-		String outputLinuxLineEndings = output.replaceAll("\\r\\n", "\n");
-		String gifIconGeneratedContent = outputLinuxLineEndings.replaceAll("img src=\"(../)?../icon/(.*?).gif\"", "img src=\"$1../icon/$2.png\"");
 		
-		CapellaDocGenTestResult testData = getTestData(gifIconGeneratedContent, context, parameterValues, fileName);
+		// Format generated content
+		output = CapellaDocGenTestUtil.formatDocGenOutput(output);
+		
+		CapellaDocGenTestResult testData = getTestData(output, context, parameterValues, fileName);
 
 		if (testData != null) {
 			getTestResults().put(testData.getClassifierId(), testData.getGeneratedHTMLContent());
