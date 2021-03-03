@@ -88,7 +88,9 @@ public class CapellaDocGenHtmlDomainElementReporter extends DocGenHtmlReporter {
 	public void loopFinished(String output, String outputWithCallBack, PatternContext context,
 			Map<String, Object> parameterValues) {
 		String fileName = (String) context.getValue(DocGenHtmlConstants.FILE_NAME);
-		CapellaDocGenTestResult testData = getTestData(output, context, parameterValues, fileName);
+		// Convert line endings
+		String outputLinuxLineEndings = output.replaceAll("\\r\\n", "\n");
+		CapellaDocGenTestResult testData = getTestData(outputLinuxLineEndings, context, parameterValues, fileName);
 
 		if (testData != null) {
 			getTestResults().put(testData.getClassifierId(), testData.getGeneratedHTMLContent());
