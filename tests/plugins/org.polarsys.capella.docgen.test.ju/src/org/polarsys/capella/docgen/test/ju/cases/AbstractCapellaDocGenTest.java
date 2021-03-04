@@ -153,6 +153,6 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 
 	@AfterClass
 	public static void afterTestExecution() {
-//		getReporter().afterTestExecution();
+		getReporter().afterTestExecution();
 	}
 }
