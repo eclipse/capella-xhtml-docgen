@@ -30,6 +30,7 @@ import org.osgi.framework.Bundle;
 import org.polarsys.capella.docgen.test.ju.launch.XHTMLDocumentationGenerationLauncher;
 import org.polarsys.capella.docgen.test.ju.reporter.CapellaDocGenHtmlDomainElementReporter;
 import org.polarsys.capella.test.framework.api.BasicTestCase;
+import org.polarsys.kitalpha.doc.gen.business.core.scope.GenerationGlobalScope;
 import org.polarsys.kitalpha.doc.gen.business.core.sirius.util.session.DiagramSessionHelper;
 import org.polarsys.kitalpha.doc.gen.business.core.ui.helper.InvokeActivityHelper;
 
@@ -135,8 +136,15 @@ public abstract class AbstractCapellaDocGenTest extends BasicTestCase {
 			docgenPref.put("DocgenExportPhysicalLink", "true");
 //			docgenPref.put("DocgenExportStatusAndReview", "true");
 			docgenPref.flush();
+			
 
+			IEclipsePreferences kitalphaDocgenPref = InstanceScope.INSTANCE.getNode("org.polarsys.kitalpha.doc.gen.business.core.preference");
+			kitalphaDocgenPref.put("ExportDiagrams", "true");
+			kitalphaDocgenPref.flush();
+			
 			launchDocumentationGeneration();
+			
+			System.out.println(GenerationGlobalScope.getInstance().getReferencesStrategy());
 		}
 	}
 
