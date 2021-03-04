@@ -18,7 +18,7 @@ public class CapellaDocGenTestUtil {
 		
 		// Remove area coords content (may differ a bit depending on the diagram rendering, the OS, the font availability...) 
 		//<area shape="rect" group="bbee94fd1bf74709bc8e3de6dfe74908" coords="226,157,242,173" href="../IFE/bbee94fd1bf74709bc8e3de6dfe74908.html#idbbee94fd-1bf7-4709-bc8e-3de6dfe74908" alt="bbee94fd1bf74709bc8e3de6dfe74908" />
-		result = result.replaceAll("area shape=(.*?) coords=\"(.*?)\"", "area shape=$1 coords=\"\"");
+		result = result.replaceAll("area shape=\"(.*?)\" group=\"(.*?)\" coords=\"(.*?)\" href=\"(.*?)\" alt=\"(.*?)\"", "area shape=\"\" group=\"\" coords=\"\" href=\"\" alt\"\"");
 		
 		return result;
 	}
