@@ -36,7 +36,3 @@ location capella-test "https://download.eclipse.org/capella/core/updates/release
 location diffmerge-pattern "https://download.eclipse.org/diffmerge/releases/0.13.0/edm-patterns-site/" {
 	org.eclipse.emf.diffmerge.patterns.templates.gen lazy
 }
-
-location egf-producer "https://download.eclipse.org/egf/updates/1.6.2/2019-06" {
-	org.eclipse.egf.feature.feature.group lazy
-}
