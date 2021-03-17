@@ -38,7 +38,6 @@ import org.polarsys.kitalpha.doc.gen.business.core.scope.GenerationGlobalScope;
 import org.polarsys.kitalpha.doc.gen.business.core.sirius.util.session.DiagramSessionHelper;
 import org.polarsys.kitalpha.doc.gen.business.core.util.DocGenHtmlUtil;
 import org.polarsys.kitalpha.doc.gen.business.core.util.EscapeChars;
-import org.polarsys.kitalpha.doc.gen.business.core.util.LabelProviderHelper;
 
 public class CapellaServices {
 	public static final String BOLD_BEGIN = "<b>";
@@ -399,7 +398,7 @@ public class CapellaServices {
 		builder.append("\" src=\""); //$NON-NLS-1$
 		builder.append(generatedFolder);
 		builder.append("/"); //$NON-NLS-1$
-		String validFileName = DocGenHtmlUtil.getValidFileName(diagram.getName());
+		String validFileName = DocGenHtmlUtil.getValidFileName(DiagramSessionHelper.getID(diagram));
 		builder.append(validFileName);
 		builder.append(".jpg\" alt=\"").append(validFileName).append("\"/>"); //$NON-NLS-1$
 		builder.append("</a>"); //$NON-NLS-1$
