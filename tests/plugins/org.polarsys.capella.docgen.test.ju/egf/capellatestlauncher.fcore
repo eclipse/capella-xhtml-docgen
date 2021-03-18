@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcore:FactoryComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:domain="http://www.eclipse.org/egf/1.0.0/domain"
+    xmlns:fcore="http://www.eclipse.org/egf/1.0.0/fcore" xmlns:fprod="http://www.eclipse.org/egf/1.0.0/fprod"
+    xmlns:pattern="http://www.eclipse.org/egf/1.0.0/pattern" xmlns:types="http://www.eclipse.org/egf/1.0.0/types"
+    xmi:id="_zup7kAkdEeCBJtEcjZDVOA" name="Capella Launcher">
+  <contractContainer xmi:id="_NXZC8YXmEeCCD-YF_4-xDg">
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_OGBqkIXmEeCCD-YF_4-xDg"
+        name="pattern.substitutions" invocationContracts="#_VGs4AIXmEeCCD-YF_4-xDg">
+      <type xmi:type="pattern:TypePatternSubstitution" xmi:id="_QgHHYIXmEeCCD-YF_4-xDg"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_3MveUIXoEeCCD-YF_4-xDg"
+        name="projectName" mandatory="true" invocationContracts="#_1hZEggkdEeCBJtEcjZDVOA">
+      <type xmi:type="types:TypeString" xmi:id="_6fJqQIXoEeCCD-YF_4-xDg"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="__XLJIIXoEeCCD-YF_4-xDg"
+        name="outputFolder" mandatory="true" invocationContracts="#_1hZEgwkdEeCBJtEcjZDVOA">
+      <type xmi:type="types:TypeString" xmi:id="_A_MP0IXpEeCCD-YF_4-xDg"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_BypKsNbyEeWvH7cKIyh8WQ"
+        name="logo.path" invocationContracts="#_GHgSINbyEeWvH7cKIyh8WQ">
+      <type xmi:type="types:TypeString" xmi:id="_BypKsdbyEeWvH7cKIyh8WQ"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_BypKstbyEeWvH7cKIyh8WQ"
+        name="logo.alt" invocationContracts="#_EecpoNbyEeWvH7cKIyh8WQ">
+      <type xmi:type="types:TypeString" xmi:id="_BypKs9byEeWvH7cKIyh8WQ"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_BypKtNbyEeWvH7cKIyh8WQ"
+        name="copyright" invocationContracts="#_CyuHoNbyEeWvH7cKIyh8WQ">
+      <type xmi:type="types:TypeString" xmi:id="_BypKtdbyEeWvH7cKIyh8WQ"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_SvtbEHBVEeu1dez3AdF-_g"
+        name="pattern.execution.reporter" invocationContracts="#_RTKkkHBVEeu1dez3AdF-_g">
+      <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_jDTlYHBVEeu1dez3AdF-_g"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_bTcVYHHDEeu1dez3AdF-_g"
+        name="pattern.execution.reporter.sidebar" invocationContracts="#_f9GBEHHDEeu1dez3AdF-_g">
+      <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_bTcVYXHDEeu1dez3AdF-_g"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_4PpXgHEqEeu1dez3AdF-_g"
+        name="pattern.execution.reporter.index.domain" invocationContracts="#_bBxD8HBtEeu1dez3AdF-_g">
+      <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_4PpXgXEqEeu1dez3AdF-_g"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_4WNSgHEqEeu1dez3AdF-_g"
+        name="pattern.execution.reporter.index.general" invocationContracts="#_csMlcHBtEeu1dez3AdF-_g">
+      <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_4WNSgXEqEeu1dez3AdF-_g"/>
+    </contracts>
+    <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_4b6R4HEqEeu1dez3AdF-_g"
+        name="pattern.execution.reporter.index.search" invocationContracts="#_eBZd0HBtEeu1dez3AdF-_g">
+      <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_4b6R4XEqEeu1dez3AdF-_g"/>
+    </contracts>
+  </contractContainer>
+  <viewpointContainer xmi:id="_83YaoAkdEeCBJtEcjZDVOA">
+    <viewpoints xmi:type="domain:DomainViewpoint" xmi:id="_9Rm4gAkdEeCBJtEcjZDVOA">
+      <domains xmi:type="domain:EMFDomain" xmi:id="_99H6sAkdEeCBJtEcjZDVOA" helperImplementation="org.polarsys.capella.docgen.ui.domain.CapellaDomainHelper"/>
+    </viewpoints>
+  </viewpointContainer>
+  <orchestration xmi:type="fprod:ProductionPlan" xmi:id="_0XCKMAkdEeCBJtEcjZDVOA">
+    <invocations xmi:id="_1hZEgAkdEeCBJtEcjZDVOA" name="Capella HTML Documentation Launch"
+        invokedActivity="fcore:FactoryComponent platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_0NRc8Nz5Ed-Vzvs7Wt1vzQ">
+      <invocationContractContainer xmi:id="_1hZEgQkdEeCBJtEcjZDVOA">
+        <invocationContracts xmi:id="_1hZEggkdEeCBJtEcjZDVOA" factoryComponentContract="#_3MveUIXoEeCCD-YF_4-xDg"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_60tqgN43Ed-Qav1YnqlO9A"/>
+        <invocationContracts xmi:id="_1hZEgwkdEeCBJtEcjZDVOA" factoryComponentContract="#__XLJIIXoEeCCD-YF_4-xDg"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_60tqgt43Ed-Qav1YnqlO9A"/>
+        <invocationContracts xmi:id="_1hZEhQkdEeCBJtEcjZDVOA" invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_qVQM8N0PEd-Vzvs7Wt1vzQ">
+          <type xmi:type="domain:TypeDomain" xmi:id="_0E5FIIX_EeCCD-YF_4-xDg" domain="#_99H6sAkdEeCBJtEcjZDVOA"/>
+        </invocationContracts>
+        <invocationContracts xmi:id="_VGs4AIXmEeCCD-YF_4-xDg" factoryComponentContract="#_OGBqkIXmEeCCD-YF_4-xDg"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_cxneQN0OEd-Vzvs7Wt1vzQ"/>
+        <invocationContracts xmi:id="_CyuHoNbyEeWvH7cKIyh8WQ" factoryComponentContract="#_BypKtNbyEeWvH7cKIyh8WQ"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_--ofgEsCEeSwTsYi0RQ-Ig"/>
+        <invocationContracts xmi:id="_EecpoNbyEeWvH7cKIyh8WQ" factoryComponentContract="#_BypKstbyEeWvH7cKIyh8WQ"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_9QN14EsCEeSwTsYi0RQ-Ig"/>
+        <invocationContracts xmi:id="_GHgSINbyEeWvH7cKIyh8WQ" factoryComponentContract="#_BypKsNbyEeWvH7cKIyh8WQ"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_6djhAEsCEeSwTsYi0RQ-Ig"/>
+        <invocationContracts xmi:id="_RTKkkHBVEeu1dez3AdF-_g" factoryComponentContract="#_SvtbEHBVEeu1dez3AdF-_g"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_d-8jYHBEEeu1dez3AdF-_g"/>
+        <invocationContracts xmi:id="_f9GBEHHDEeu1dez3AdF-_g" factoryComponentContract="#_bTcVYHHDEeu1dez3AdF-_g"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_DejZUHHCEeu1dez3AdF-_g"/>
+        <invocationContracts xmi:id="_bBxD8HBtEeu1dez3AdF-_g" factoryComponentContract="#_4PpXgHEqEeu1dez3AdF-_g"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_MjsQ0HBtEeu1dez3AdF-_g"/>
+        <invocationContracts xmi:id="_csMlcHBtEeu1dez3AdF-_g" factoryComponentContract="#_4WNSgHEqEeu1dez3AdF-_g"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_MkWYIHBtEeu1dez3AdF-_g"/>
+        <invocationContracts xmi:id="_eBZd0HBtEeu1dez3AdF-_g" factoryComponentContract="#_4b6R4HEqEeu1dez3AdF-_g"
+            invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.capella.docgen/egf/HTMLDocGenCapella.fcore#_MlEJ0HBtEeu1dez3AdF-_g"/>
+      </invocationContractContainer>
+    </invocations>
+  </orchestration>
+</fcore:FactoryComponent>

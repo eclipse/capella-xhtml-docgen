@@ -44,6 +44,26 @@
           name="copyright" invocationContracts="#_cfRA8ksFEeSfyeTEy5zUcw">
         <type xmi:type="types:TypeString" xmi:id="_--ofgUsCEeSwTsYi0RQ-Ig"/>
       </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_d-8jYHBEEeu1dez3AdF-_g"
+          name="pattern.execution.reporter" invocationContracts="#_cCZXIHBEEeu1dez3AdF-_g">
+        <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_gTOTIHBEEeu1dez3AdF-_g"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_DejZUHHCEeu1dez3AdF-_g"
+          name="pattern.execution.reporter.sidebar" invocationContracts="#_Fr3lcHHCEeu1dez3AdF-_g">
+        <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_DekAYHHCEeu1dez3AdF-_g"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_MjsQ0HBtEeu1dez3AdF-_g"
+          name="pattern.execution.reporter.index.domain" invocationContracts="#_N94W4HBtEeu1dez3AdF-_g">
+        <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_MjsQ0XBtEeu1dez3AdF-_g"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_MkWYIHBtEeu1dez3AdF-_g"
+          name="pattern.execution.reporter.index.general" invocationContracts="#_QXItQHBtEeu1dez3AdF-_g">
+        <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_MkWYIXBtEeu1dez3AdF-_g"/>
+      </contracts>
+      <contracts xmi:type="fcore:FactoryComponentContract" xmi:id="_MlEJ0HBtEeu1dez3AdF-_g"
+          name="pattern.execution.reporter.index.search" invocationContracts="#_SK9bUHBtEeu1dez3AdF-_g">
+        <type xmi:type="pattern:TypePatternExecutionReporter" xmi:id="_MlEJ0XBtEeu1dez3AdF-_g"/>
+      </contracts>
     </contractContainer>
     <viewpointContainer xmi:id="_2Zy-4Nz5Ed-Vzvs7Wt1vzQ">
       <viewpoints xmi:type="pattern:PatternViewpoint" xmi:id="_222HQNz5Ed-Vzvs7Wt1vzQ">
@@ -924,6 +944,16 @@
               invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_WEqVkNb2EeWvH7cKIyh8WQ"/>
           <invocationContracts xmi:id="_4fQ2oNb4EeWvH7cKIyh8WQ" sourceInvocationContract="#_cfRA80sFEeSfyeTEy5zUcw"
               invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_WBOnENb2EeWvH7cKIyh8WQ"/>
+          <invocationContracts xmi:id="_cCZXIHBEEeu1dez3AdF-_g" factoryComponentContract="#_d-8jYHBEEeu1dez3AdF-_g"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_L-P-EHBEEeu1dez3AdF-_g"/>
+          <invocationContracts xmi:id="_Fr3lcHHCEeu1dez3AdF-_g" factoryComponentContract="#_DejZUHHCEeu1dez3AdF-_g"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_92Y28HHBEeu1dez3AdF-_g"/>
+          <invocationContracts xmi:id="_N94W4HBtEeu1dez3AdF-_g" factoryComponentContract="#_MjsQ0HBtEeu1dez3AdF-_g"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_WPDYUHBsEeu1dez3AdF-_g"/>
+          <invocationContracts xmi:id="_QXItQHBtEeu1dez3AdF-_g" factoryComponentContract="#_MkWYIHBtEeu1dez3AdF-_g"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_tu0OYHBsEeu1dez3AdF-_g"/>
+          <invocationContracts xmi:id="_SK9bUHBtEeu1dez3AdF-_g" factoryComponentContract="#_MlEJ0HBtEeu1dez3AdF-_g"
+              invokedContract="fcore:FactoryComponentContract platform:/plugin/org.polarsys.kitalpha.doc.gen.business.core/egf/HTMLDocGenCommon.fcore#_xHyVUHBsEeu1dez3AdF-_g"/>
         </invocationContractContainer>
       </invocations>
     </orchestration>

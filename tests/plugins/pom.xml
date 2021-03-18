@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2017, 2021 THALES GLOBAL SERVICES.
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0
+
+  SPDX-License-Identifier: EPL-2.0
+
+  Contributors:
+       Thales - initial API and implementation
+	   Obeo - add support for generation configuration files
+-->
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.polarsys</groupId>
+	<artifactId>org.polarsys.capella.addon.docgen.tests.plugins</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.polarsys</groupId>
+		<artifactId>org.polarsys.capella.addon.docgen</artifactId>
+		<version>5.0.0-SNAPSHOT</version>
+		<relativePath>../../</relativePath>
+	</parent>
+
+	<modules>
+		<module>org.polarsys.capella.docgen.test.ju</module>
+	</modules>
+</project>

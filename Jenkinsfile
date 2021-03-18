@@ -16,9 +16,17 @@ pipeline {
         sh 'mvn clean install -P full -P sign -e -f pom.xml'
       }
     }
+    stage('Run tests') {
+      steps {
+      	wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+        	sh 'mvn -Dmaven.test.failure.ignore=true -Dtycho.localArtifacts=ignore integration-test -P tests -e -f pom.xml'
+        }
+      }
+    }
     stage('Archive artifacts') {
       steps {
         archiveArtifacts artifacts: 'releng/org.polarsys.capella.docgen.site/target/CapellaXHTMLDocGen-*.zip, releng/org.polarsys.capella.docgen.site/target/repository/**'
+        junit '**/target/surefire-reports/*.xml'
       }
     }
     stage('Deploy') {

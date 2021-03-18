@@ -13,6 +13,8 @@ package org.polarsys.capella.docgen.diagram;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -82,8 +84,8 @@ public class CapellaHelper {
 		return null;
 	}
 
-	public static Set<DSemanticDiagram> getDiagramContainingObject(CapellaElement element) {
-		Set<DSemanticDiagram> diagrams = new HashSet<DSemanticDiagram>();
+	public static List<DSemanticDiagram> getDiagramContainingObject(CapellaElement element) {
+		List<DSemanticDiagram> diagrams = new ArrayList<DSemanticDiagram>();
 		
 		if (GenerationGlobalScope.getInstance().getReferencesStrategy().equals(ScopeReferencesStrategy.DONT_EXPORT)) {
 			element = (CapellaElement) GenerationGlobalScope.getInstance().getOriginalModelElement(element);
@@ -93,6 +95,15 @@ public class CapellaHelper {
 			.filter(rep -> rep instanceof DSemanticDiagram)
 			.filter(rep -> exportRefToDiagram(rep, ((DSemanticDiagram) rep).getTarget()))
 			.forEach(diag -> diagrams.add((DSemanticDiagram) diag));
+		
+		Collections.sort(diagrams, new Comparator<DSemanticDiagram>() {
+			@Override
+			public int compare(DSemanticDiagram o1, DSemanticDiagram o2) {
+				String o1Str = o1.getName() + o1.getTarget().toString();
+				String o2Str = o2.getName() + o2.getTarget().toString();
+				return o1Str.compareTo(o2Str);
+			}
+		});
 		
 		return diagrams;
 	}
