@@ -1,86 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="CapellaXHTMLDocGenAddon" sequenceNumber="1623765765">
+<target name="CapellaXHTMLDocGenAddon" sequenceNumber="1625750417">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="0.0.0"/>
-      <repository id="GMF-Notation-1.13.0" location="http://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913"/>
+      <repository id="GMF-Notation-1.13.0" location="https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.gmf.runtime.thirdparty.feature.group" version="0.0.0"/>
-      <repository id="GMF-Runtime-1.13.0" location="http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913"/>
+      <repository id="GMF-Runtime-1.13.0" location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.sdk.feature.group" version="4.16.0.v20200604-0951"/>
-      <unit id="org.eclipse.platform.feature.group" version="4.16.0.v20200604-0951"/>
+      <unit id="org.eclipse.sdk.feature.group" version="4.20.0.v20210611-1636"/>
+      <unit id="org.eclipse.platform.feature.group" version="4.20.0.v20210611-1600"/>
       <unit id="org.eclipse.draw2d.source.feature.group" version="3.10.100.201606061308"/>
-      <unit id="org.eclipse.emf.sdk.feature.group" version="2.22.0.v20200519-1135"/>
-      <unit id="org.eclipse.emf.validation.source.feature.group" version="1.12.1.201812070911"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.26.0.v20210506-1425"/>
+      <unit id="org.eclipse.emf.validation.source.feature.group" version="1.12.2.202008210805"/>
       <unit id="org.eclipse.emf.transaction.source.feature.group" version="1.12.0.201805140824"/>
       <unit id="org.eclipse.emf.workspace.source.feature.group" version="1.12.0.201805140824"/>
       <unit id="org.eclipse.gef.source.feature.group" version="3.11.0.201606061308"/>
-      <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.800.v20200514-1529"/>
-      <unit id="com.ibm.icu" version="64.2.0.v20190507-1337"/>
-      <unit id="org.eclipse.viatra.query.sdk.feature.source.feature.group" version="2.4.0.202006101157"/>
-      <unit id="org.eclipse.jgit.source.feature.group" version="5.8.0.202006091008-r"/>
-      <unit id="org.eclipse.egit.mylyn.feature.group" version="5.8.0.202006091008-r"/>
-      <unit id="org.eclipse.egit.source.feature.group" version="5.8.0.202006091008-r"/>
-      <unit id="org.eclipse.mylyn_feature.feature.group" version="3.25.1.v20200514-1748"/>
-      <unit id="org.eclipse.mylyn.commons.feature.group" version="3.25.1.v20200511-1958"/>
-      <unit id="org.eclipse.mylyn.commons.sdk.feature.group" version="3.25.1.v20200511-1958"/>
-      <unit id="org.eclipse.mylyn.context_feature.feature.group" version="3.25.1.v20200512-2113"/>
-      <unit id="org.eclipse.mylyn.monitor.feature.group" version="3.25.1.v20200511-1958"/>
-      <unit id="org.eclipse.mylyn.team_feature.feature.group" version="3.25.1.v20200512-2113"/>
-      <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="3.25.1.v20200512-2113"/>
-      <unit id="org.eclipse.mylyn.help.ui" version="3.25.1.v20200512-0316"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.1200.v20210527-0259"/>
+      <unit id="com.ibm.icu" version="67.1.0.v20200706-1749"/>
+      <unit id="org.eclipse.viatra.query.sdk.feature.source.feature.group" version="2.5.0.202012091732"/>
+      <unit id="org.eclipse.jgit.source.feature.group" version="5.12.0.202106070339-r"/>
+      <unit id="org.eclipse.egit.mylyn.feature.group" version="5.12.0.202106070339-r"/>
+      <unit id="org.eclipse.egit.source.feature.group" version="5.12.0.202106070339-r"/>
+      <unit id="org.eclipse.mylyn_feature.feature.group" version="3.25.2.v20200814-0512"/>
+      <unit id="org.eclipse.mylyn.commons.feature.group" version="3.25.2.v20200813-0821"/>
+      <unit id="org.eclipse.mylyn.context_feature.feature.group" version="3.25.2.v20200828-1617"/>
+      <unit id="org.eclipse.mylyn.monitor.feature.group" version="3.25.2.v20200813-0821"/>
+      <unit id="org.eclipse.mylyn.team_feature.feature.group" version="3.25.2.v20200828-1617"/>
+      <unit id="org.eclipse.mylyn.ide_feature.feature.group" version="3.25.2.v20200828-1617"/>
+      <unit id="org.eclipse.mylyn.help.ui" version="3.25.2.v20200814-0512"/>
       <unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
       <unit id="org.apache.commons.lang" version="2.6.0.v201404270220"/>
-      <unit id="com.google.guava" version="27.1.0.v20190517-1946"/>
-      <repository id="eclipse" location="http://download.eclipse.org/releases/2020-06"/>
+      <unit id="com.google.guava" version="30.1.0.v20210127-2300"/>
+      <repository id="eclipse" location="http://download.eclipse.org/releases/2021-06"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="6.5.1.202106111115"/>
-      <unit id="org.eclipse.sirius.doc.feature.source.feature.group" version="6.5.1.202106111115"/>
-      <unit id="org.eclipse.sirius.runtime.source.feature.group" version="6.5.1.202106111115"/>
-      <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="6.5.1.202106111115"/>
-      <unit id="org.eclipse.sirius.runtime.ide.ui.source.feature.group" version="6.5.1.202106111115"/>
-      <unit id="org.eclipse.sirius.interpreter.feature.source.feature.group" version="6.5.1.202106111115"/>
+      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="7.0.0.202106090832"/>
+      <unit id="org.eclipse.sirius.doc.feature.source.feature.group" version="7.0.0.202106090832"/>
+      <unit id="org.eclipse.sirius.runtime.source.feature.group" version="7.0.0.202106090832"/>
+      <unit id="org.eclipse.sirius.runtime.aql.source.feature.group" version="7.0.0.202106090832"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.source.feature.group" version="7.0.0.202106090832"/>
+      <unit id="org.eclipse.sirius.interpreter.feature.source.feature.group" version="7.0.0.202106090832"/>
       <unit id="org.eclipse.acceleo.ui.interpreter.source.feature.group" version="3.7.11.202102190929"/>
-      <unit id="org.eclipse.sirius.aql.source.feature.group" version="6.5.1.202106111115"/>
+      <unit id="org.eclipse.sirius.aql.source.feature.group" version="7.0.0.202106090832"/>
       <unit id="org.eclipse.acceleo.query.source.feature.group" version="7.0.0.202102190929"/>
-      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group" version="6.5.1.202106111115"/>
-      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/releases/6.5.1/2020-06"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group" version="7.0.0.202106090832"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/stable/7.0.0-S20210609-041829/2021-06"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.kitalpha.ad.runtime.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.cadence.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.emde.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.emde.ui.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.massactions.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.common.share.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.common.commands.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.common.scrutiny.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.detachment.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.report.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.report.ui.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.richtext.widget.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.transposer.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <repository id="kitalpha-runtime-core-master" location="https://download.eclipse.org/kitalpha/updates/stable/runtime/5.1.0-S202106140930"/>
-    </location>
-    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.polarsys.kitalpha.doc.feature.feature.group" version="5.1.0.202106140930"/>
-      <unit id="org.polarsys.kitalpha.emde.sdk.feature.source.feature.group" version="5.1.0.202106140930"/>
-      <repository id="kitalpha-sdk-master" location="https://download.eclipse.org/kitalpha/updates/stable/sdk/5.1.0-S202106140930"/>
+      <unit id="org.polarsys.kitalpha.ad.runtime.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.cadence.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.common.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.emde.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.emde.ui.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.massactions.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.common.share.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.common.commands.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.common.scrutiny.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.model.detachment.ui.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.report.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.report.ui.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.resourcereuse.ui.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.richtext.widget.ext.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.transposer.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <repository id="kitalpha-runtime-core-master" location="https://ci.eclipse.org/kitalpha/job/Kitalpha/job/master-6.0/7/artifact/releng/plugins/org.polarsys.kitalpha.releng.runtime.updatesite/target/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.diffmerge.feature.source.feature.group" version="0.13.1.202105110718"/>
@@ -88,19 +82,24 @@
       <unit id="org.eclipse.emf.diffmerge.gmf.feature.source.feature.group" version="0.13.1.202105110718"/>
       <unit id="org.eclipse.emf.diffmerge.sdk.feature.source.feature.group" version="0.13.1.202105110718"/>
       <unit id="org.eclipse.emf.diffmerge.egit.feature.source.feature.group" version="0.13.1.202105110718"/>
-      <repository id="diffmerge-core" location="https://download.eclipse.org/diffmerge/stable/0.13.1-M3/emf-diffmerge-site"/>
+      <repository id="diffmerge-core" location="https://download.eclipse.org/diffmerge/releases/0.13.1/emf-diffmerge-site"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.amalgam.explorer.activity.source.feature.group" version="1.12.1.202103300948"/>
-      <repository id="amalgam" location="https://download.eclipse.org/modeling/amalgam/updates/stable/1.12.1-S20210330/capella"/>
+      <repository id="amalgam" location="https://download.eclipse.org/modeling/amalgam/updates/releases/1.12.1/capella"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.egf.sdk.feature.source.feature.group" version="1.6.2.202001031546"/>
       <repository id="egf" location="http://download.eclipse.org/egf/updates/1.6.2/2019-06/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.richtext.feature.feature.group" version="1.2.0.201711021145"/>
-      <repository id="nebula" location="http://download.eclipse.org/nebula/releases/1.4.0/"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group" version="0.0.0"/>
+      <repository id="Nattable" location="https://download.eclipse.org/nattable/releases/2.0.1/repository/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.nebula.widgets.richtext.feature.feature.group" version="1.3.0.201912241810"/>
+      <repository id="nebula" location="http://download.eclipse.org/nebula/releases/2.3.0/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
@@ -109,16 +108,18 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.capella.rcp.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.capella.core.re.feature.feature.group" version="0.0.0"/>
-      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/stable/5.1.0-S20210615-075512/org.polarsys.capella.rcp.site/"/>
+      <repository id="capella-master" location="https://download.eclipse.org/capella/core/updates/nightly/master-6.0-PR-2212-2/org.polarsys.capella.rcp.site/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group" version="0.0.0"/>
       <unit id="org.polarsys.kitalpha.doc.gen.business.core.feature.source.feature.group" version="0.0.0"/>
-      <repository id="kitalpha-sdk" location="https://download.eclipse.org/kitalpha/updates/stable/sdk/5.1.0-S202106140930/"/>
+      <unit id="org.polarsys.kitalpha.doc.feature.feature.group" version="5.1.0.202107081008"/>
+      <unit id="org.polarsys.kitalpha.emde.sdk.feature.source.feature.group" version="5.1.0.202107081008"/>
+      <repository id="kitalpha-sdk-master" location="https://ci.eclipse.org/kitalpha/job/Kitalpha/job/master-6.0/7/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.emf.query.feature.group" version="0.0.0"/>
-      <repository id="eclipse_2020_06" location="https://download.eclipse.org/releases/2020-06/"/>
+      <repository id="eclipse_2020_06" location="https://download.eclipse.org/releases/2021-06/"/>
     </location>
   </locations>
 </target>

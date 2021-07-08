@@ -11,20 +11,20 @@
  *******************************************************************************/
 target "CapellaXHTMLDocGenAddon"
 
-include "https://raw.githubusercontent.com/eclipse/capella/master/releng/plugins/org.polarsys.capella.targets/full/capella.target-definition.targetplatform"
+include "https://download.eclipse.org/capella/core/updates/nightly/master-6.0-PR-2212-2/targets/capella.target-definition.targetplatform"
 
 with source, requirements
 
-location capella-master "https://download.eclipse.org/capella/core/updates/stable/5.1.0-S20210615-075512/org.polarsys.capella.rcp.site/" {
+location capella-master "https://download.eclipse.org/capella/core/updates/nightly/master-6.0-PR-2212-2/org.polarsys.capella.rcp.site/" {
 	org.polarsys.capella.rcp.feature.group lazy
 	org.polarsys.capella.core.re.feature.feature.group lazy
 }
 
-location kitalpha-sdk "https://download.eclipse.org/kitalpha/updates/stable/sdk/5.1.0-S202106140930/" {
+location kitalpha-sdk-master "https://ci.eclipse.org/kitalpha/job/Kitalpha/job/master-6.0/7/artifact/releng/plugins/org.polarsys.kitalpha.releng.sdk.updatesite/target/repository/" {
 	org.polarsys.kitalpha.doc.gen.business.core.feature.feature.group lazy
 	org.polarsys.kitalpha.doc.gen.business.core.feature.source.feature.group lazy
 }
 
-location eclipse_2020_06 "https://download.eclipse.org/releases/2020-06/" {
+location eclipse_2020_06 "https://download.eclipse.org/releases/2021-06/" {
 	org.eclipse.emf.query.feature.group lazy
 }
